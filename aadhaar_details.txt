@@ -1,0 +1,31 @@
+Step1:
+	-Send first request
+=============Request-1===========
+URL:
+http://14.141.204.73/EmployeeProfile360/CustomerApp.svc/Get_Aadhar_OTP
+
+Parameters: 
+[{"AadharNumber":"971687381170"}]
+
+Response:
+ {"Get_Aadhar_OTPResult":"{\"Master_Tag\":{\"Table\" : [{\"Status\" : \"Success\"}]}}"}
+----------------------------------------------------------------------------------------
+
+Step-2
+	then you will get OTP on your registered mobile
+	then send again a request with OTP
+
+===========Request-2===========
+URL:
+http://14.141.204.73/EmployeeProfile360/CustomerApp.svc/GetEKYC_InstaApproval
+
+Parameters: 
+[{"AadharNumber":"971687381170","OTP":"138574"}]
+------------------------------------------------------------------------------------
+
+Step-3
+	you will get response
+	
+Response :
+{"GetEKYC_InstaApprovalResult":"[\"Dilip Puri\",\"\",\"9408822223\",\"Village-Paladi(s) Choudhariyon Ka Vas Sanchore City Sanchore City\",\" Sanchore\",\"Sanchore City\",\"Rajasthan\",\"343041\",\"dilippuripuri@gmail.com\",\"04-02-1995\"]"}
+------------------------------------------------------------------------------------------------
