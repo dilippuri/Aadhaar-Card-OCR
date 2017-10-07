@@ -6,7 +6,7 @@ This document for OCR
 Problem:
 *****************************************************
 	Extract information from image of Aadhaar Card by OCR in proper format.
-		Imformation like - 
+		Information like - 
 					Name, Year of Birth, Gender, UID
 
 
