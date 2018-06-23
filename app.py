@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from datetime import datetime
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/index.html')
 def homepage():
     the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
