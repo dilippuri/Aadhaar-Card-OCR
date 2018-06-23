@@ -13,10 +13,6 @@ def homepage():
     <img src="http://loremflickr.com/600/400" />
     """.format(time=the_time)
 
-@app.route('/<name>')
-def hello_name(name):
-    return "Hello {}!".format(name)
-
 @app.route('/<index>')
 def render_static(index):
     return render_template('%s.html' % index)
