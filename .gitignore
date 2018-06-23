@@ -1,1 +1,2 @@
-YOUR-FILE-WITH-SENSITIVE-DATA
+venv
+*.pyc
