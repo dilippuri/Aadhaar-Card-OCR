@@ -17,9 +17,6 @@
     {% endif %}
 </head>
 <body>
-	<style type=text/css>
-	    background-image: url("static/banner.jpg");
-	</style>
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
@@ -44,7 +41,7 @@
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-12">
-            <h3>Analysis of Doc Image</h3>
+            <h3><a href="/" style="background: url('{{ url_for('static', filename='banner.jpg') }}') left center no-repeat; background-size: 130px">Analysis of Doc Image</h3>
             <h6>Extract rich information from image(s) to categorize and process visual data—and perform machine-assisted moderation of image(s) to help curate your services.</h6>
           {% block content %}{% endblock %}
         </div>
