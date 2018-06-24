@@ -1,5 +1,6 @@
 body {
   background: #fafafa;
+  background-image:url_for('static', filename='banner.jpg');
   color: #333333;
   margin-top: 5rem;
 }
