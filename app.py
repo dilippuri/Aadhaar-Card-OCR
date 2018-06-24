@@ -13,8 +13,8 @@ def homepage():
     <img src="http://loremflickr.com/600/400" />
     """.format(time=the_time)
 
-@app.route('/<index>')
-def render_static(index):
+@app.route('/index')
+def index():
     return render_template('%s.html' % index)
 
 if __name__ == '__main__':
