@@ -41,6 +41,7 @@
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-12">
+			<img src="{{ url_for('static', filename='banner.jpg') }}" width="1400" height="222">
             <h3>Analysis of Doc Image</h3>
             <h6>Extract rich information from image(s) to categorize and process visual data—and perform machine-assisted moderation of image(s) to help curate your services.</h6>
           {% block content %}{% endblock %}
