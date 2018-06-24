@@ -1,9 +1,10 @@
 body {
   background: #fafafa;
+  background-image:url('https://image.freepik.com/free-vector/abstract-background-with-a-watercolor-texture_1048-2144.jpg');
   color: #333333;
   margin-top: 5rem;
 }
-
+  
 h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
