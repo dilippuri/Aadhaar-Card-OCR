@@ -1,22 +1,32 @@
-from flask import Flask, render_template
-from datetime import datetime
+from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
-@app.route('/')
-def homepage():
-    the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
+posts = [
+    {
+        'author': 'Corey Schafer',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'April 20, 2018'
+    },
+    {
+        'author': 'Jane Doe',
+        'title': 'Blog Post 2',
+        'content': 'Second post content',
+        'date_posted': 'April 21, 2018'
+    }
+]
 
-    return """
-    <h1>Hello heroku</h1>
-    <p>It is currently {time}.</p>
 
-    <img src="http://loremflickr.com/600/400" />
-    """.format(time=the_time)
+@app.route("/")
+@app.route("/home")
+def home():
+    return render_template('home.html', posts=posts)
 
-@app.route('/index')
-def index():
-    return render_template('index.html')
+
+@app.route("/about")
+def about():
+    return render_template('about.html', title='About')
+
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
-
+    app.run(debug=True)
