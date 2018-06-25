@@ -4,6 +4,13 @@ body {
   color: #333333;
   margin-top: 5rem;
 }
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
   
 h1, h2, h3, h4, h5, h6 {
   color: #444444;
