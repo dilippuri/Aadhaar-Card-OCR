@@ -38,9 +38,10 @@
       </nav>
     </header>
 
-    <main role="main" class="container">
+ <!-- Navbar Right Side -->
+ <main role="main" class="container">
 
-	        <div class="col-md-12">
+<div class="col-md-12">
 	            <h3 align="center">Analysis of Doc Image</h3>
 	            <h6 align="justify">Extract rich information from image(s) to categorize and process visual data—and perform machine-assisted moderation of image(s) to help curate your services.</h6>
 	        </div>
@@ -49,20 +50,17 @@
   <hr class="hr-text" data-content="See It in Action">
 </div>
 
-		<form action="upload.php" method="post" enctype="multipart/form-data">	
-	    Select image to process
-    	<input type="file" name="fileToUpload" id="fileToUpload">
-    	<input type="submit" value="Submit" name="submit">
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+    	<input type="file" name="fileToUpload" id="fileToUpload" class="button">
+    	<input type="submit" value="Submit" name="submit" class="button">
 		</form>
-
-		<div class="row">
+      
+   
+<div class="col-md-12">
 	        <div class="col-md-6">
-				<div class="demo-img-wrapper"> 
-					<img src="static/banner.jpg" alt="demo image" role="presentation" height="400" width="500">
-				</div>
-			</div>       
-			<div id="table-wrapper">
-			  <div id="table-scroll" style="overflow-x:auto;">
+									<img src="static/banner.jpg" alt="demo image" role="presentation" height="400" width="500">
+							</div>       
+						  <div id="table-scroll" style="overflow-x:auto;">
 				<table class="fixed">
     <thead>
         <tr>
@@ -97,9 +95,8 @@
         </tr>
     </tbody>
 </table>
-			  </div>
-			</div>
-		</div>
+						</div>
+   						</div>
 
 
     </main>
@@ -109,5 +106,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
 </body>
 </html>

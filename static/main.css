@@ -1,15 +1,30 @@
 body {
   text-align: center;
   background: #fcfcfa;
-  color: #818078;
+  color: #818073;
   font-family: Futura, sans-serif;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .container {
   max-width: 50%;  
   margin: 40px auto;
 }
-
+.fixed{
+    width: 200px;
+}
+.flex-item{
+    flex-grow: 4;
+}
 .hr-text {
   line-height: 1em;
   position: relative;
