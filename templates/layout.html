@@ -109,15 +109,18 @@
 				</table>
 			  </div>
 			</div>
-			<form method="GET" action="example.cgi">
-				<p><input type="text" name="name" size="30"></p>
-				<p>
-				<input type="image" src="image/button.gif" alt="Submit">
-				<input type="image" src="image/button.gif" alt="Submit">
-				</p>
-			</form>
 		</div>
+		<form method="GET" action="example.cgi">
+				<p><input type="text" name="name" size="30"></p>
+				<p><input type="image" src="image/button.gif" alt="Submit">
+				<input type="image" src="image/button.gif" alt="Submit"></p>
+		</form>
 
+		<form action="upload.php" method="post" enctype="multipart/form-data">	
+	    Select image to upload:
+    	<input type="file" name="fileToUpload" id="fileToUpload">
+    	<input type="submit" value="Upload Image" name="submit">
+		</form>
 
     </main>
 
