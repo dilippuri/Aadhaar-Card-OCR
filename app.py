@@ -11,11 +11,6 @@ posts = [
 ]
 
 @app.route('/')
-def hello_world():
-    author = "Me"
-    name = "You"
-    return render_template('index.html', author=author, name=name)
-
 @app.route("/home")
 def home():
     return render_template('home.html', posts=posts, title='DocOcr')
