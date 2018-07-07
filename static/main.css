@@ -11,6 +11,22 @@ body {
     border: 3px solid green;
     padding: 10px;
 }
+
+.right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+.left {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
   
 h1, h2, h3, h4, h5, h6 {
   color: #444444;
@@ -101,6 +117,26 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+table ,tr td{
+    border:1px solid red
+}
+tbody {
+    display:block;
+    height:50px;
+    overflow:auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
+}
+thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+table {
+    width:400px;
 }
 
 #table-wrapper {
