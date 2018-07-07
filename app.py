@@ -3,12 +3,6 @@ app = Flask(__name__)
 
 posts = [
     {
-        'author': 'Corey Schafer',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
-    },
-    {
         'author': 'Jane Doe',
         'title': 'Blog Post 2',
         'content': 'Second post content',
@@ -16,12 +10,15 @@ posts = [
     }
 ]
 
+@app.route('/')
+def hello_world():
+    author = "Me"
+    name = "You"
+    return render_template('index.html', author=author, name=name)
 
-@app.route("/")
 @app.route("/home")
 def home():
     return render_template('home.html', posts=posts, title='DocOcr')
-
 
 @app.route("/about")
 def about():
