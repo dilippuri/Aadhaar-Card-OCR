@@ -119,24 +119,37 @@ a.article-title:hover {
   font-size: 2.5rem;
 }
 
-table ,tr td{
-    border:1px solid red
+.fixed {
+  width:350px;
+  table-layout: fixed;
+  border-collapse: collapse;
 }
-tbody {
-    display:block;
-    height:50px;
-    overflow:auto;
+.fixed th {
+  text-decoration: underline;
 }
-thead, tbody tr {
-    display:table;
-    width:100%;
-    table-layout:fixed;/* even columns width , fix width of table too*/
+.fixed th,
+.fixed td {
+  padding: 5px;
+  text-align: left;
+  min-width: 200px;
 }
-thead {
-    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+
+
+.fixed thead {
+  background-color: red;
+  color: #fdfdfd;
 }
-table {
-    width:400px;
+.fixed thead tr {
+  display: block;
+  position: relative;
+}
+.fixed tbody {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  height: 100px;
+  overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #table-wrapper {
