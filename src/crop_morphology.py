@@ -113,7 +113,7 @@ def find_components(edges, max_components=16):
     while count > 16:
         n += 1
         dilated_image = dilate(edges, N=3, iterations=n)
-        contours, hierarchy = cv2.findContours(dilated_image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+        _, contours, hierarchy = cv2.findContours(dilated_image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
         count = len(contours)
     #print dilation
     #Image.fromarray(edges).show()
@@ -234,7 +234,7 @@ def process_image(path, out_path):
     edges = cv2.Canny(np.asarray(im), 100, 200)
 
     # TODO: dilate image _before_ finding a border. This is crazy sensitive!
-    contours, hierarchy = cv2.findContours(edges, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    _, contours, hierarchy = cv2.findContours(edges, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     borders = find_border_components(contours, edges)
     borders.sort(key=lambda (i, x1, y1, x2, y2): (x2 - x1) * (y2 - y1))
 
