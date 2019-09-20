@@ -1,6 +1,6 @@
 - name: tests
   service: web-codeship-example-python
-  command: python manage.py test
+  command: python app.py test
 - name: deploy
   tag: master
   service: codeship-heroku-deployment
