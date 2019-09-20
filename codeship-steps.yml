@@ -1,0 +1,7 @@
+- name: tests
+  service: web-codeship-example-python
+  command: python manage.py test
+- name: deploy
+  tag: master
+  service: codeship-heroku-deployment
+  command: codeship_heroku deploy /deploy python-django-todoapp
