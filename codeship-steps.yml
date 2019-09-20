@@ -1,5 +1,5 @@
 - name: tests
-  service: web-codeship-example-python
+  service: depends_on
   command: python app.py test
 - name: deploy
   tag: master
