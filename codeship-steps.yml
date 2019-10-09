@@ -1,0 +1,7 @@
+- name: tests
+  service: depends_on
+  command: python app.py test
+- name: deploy
+  tag: master
+  service: codeship-heroku-deployment
+  command: codeship_heroku deploy /deploy python-django-todoapp
