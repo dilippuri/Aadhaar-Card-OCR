@@ -73,7 +73,7 @@ text21 = []
 
 # Searching for Year of Birth
 lines = text
-print lines
+print (lines)
 #tokens = nltk.word_tokenize(lines)
 #sentences = nltk.sent_tokenize(lines)
 #sentences = [nltk.word_tokenize(sent) for sent in sentences]
@@ -217,13 +217,13 @@ os.remove('temp.jpg')
 with open('../result/'+ os.path.basename(sys.argv[1]).split('.')[0] +'.json', 'r') as f:
      ndata = json.load(f)
 #'''
-print "+++++++++++++++++++++++++++++++"     
+print ("+++++++++++++++++++++++++++++++"     )
 print(data['Name'])
-print "-------------------------------"
+print ("-------------------------------")
 print(data['Gender'])
-print "-------------------------------"
+print ("-------------------------------")
 print(data['Birth year'])
-print "-------------------------------"
+print ("-------------------------------")
 print(data['Uid'])
-print "-------------------------------"
+print ("-------------------------------")
 #'''

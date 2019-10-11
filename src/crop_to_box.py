@@ -1,13 +1,15 @@
 #!/usr/bin/env python
-"""Crop an image to the area covered by a box file.
+"""
+Crop an image to the area covered by a box file.
 The idea is that we're only interested in the portions of an image which
 contain text. The other parts can be removed to get better accuracy and smaller
 images.
 """
 
 import sys
-from PIL import Image, ImageFilter
+from PIL import Image
 from box import BoxLine, load_box_file
+
 
 def find_box_extrema(boxes):
     """Returns a BoxLine with the extreme values of the boxes."""
@@ -30,14 +32,16 @@ def padded_box(box, pad_width, pad_height):
 
 
 def crop_image_to_box(im, box):
-    """Returns a new image containing the pixels inside box.
-    
+    """
+    Returns a new image containing the pixels inside box.
     This accounts for BoxLine measuring pixels from the bottom up, whereas
     Image objects measure from the top down.
     """
     w, h = im.size
-    box = [int(round(v)) for v in (box.left, h - box.top, box.right, h - box.bottom)]
+    box = [int(round(v)) for v in (box.left, h - box.top,
+                                   box.right, h - box.bottom)]
     return im.crop(box)
+
 
 if __name__ == '__main__':
     _, box_path, image_path, out_image_path = sys.argv
